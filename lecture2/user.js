@@ -1,7 +1,5 @@
-const http = require("http");
-const fs = require("fs");
-const { buffer } = require("stream/consumers");
-const server = http.createServer((req, res) => {
+const fs=require("fs")
+const UserApp=((req, res) => {
   if (req.url === "/") {
     res.setHeader("Content-Type", "text/html");
     res.write("<html>");
@@ -48,6 +46,4 @@ const server = http.createServer((req, res) => {
     return res.end();
   }
 });
-server.listen(8000, () => {
-  console.log("server is start successfully");
-});
+module.exports=UserApp;
