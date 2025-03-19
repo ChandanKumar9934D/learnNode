@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add home</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        *{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* header */
+.nav{
+    display: flex;
+    background-color: red;
+}
+li{
+    list-style-type:none;
+    margin: 2rem;
+}
+a{
+    color: white;
+    text-decoration: none;
+
+}
+/* end header */
+
+
+/* start card */
+
+.container{
+    height: 40vh;
+    width: 18vw;
+    border: 2px solid black;
+    margin: 5rem;
+    border-radius: 3%;
+
+}
+.card{
+    width: 100%;
+    height: 60%;
+
+}
+img{
+    width: 100%;
+    height: 60%;
+    
+}
+h1,h3,p{
+    padding:2px 10px;
+}
+h3{
+    color: red;
+}
+p{
+    color: rgb(158, 104, 4);
+}
+input{
+    margin: 10px 45%;
+    width: 20%;
+    padding: 0.5%;
+    border-radius: 5px;
+}
+#headding{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+    </style>
+</head>
+<body>
+    <%- include("partials/header.ejs")%>
+    <h1 id="headding">add home</h1>
+    <form action="/admin/addhome" method="post">
+        <input type="text" placeholder="enter home name" name="homename"><br>
+        <input type="number" placeholder="enter home price" name="price"><br>
+        <input type="number" max="5" min="1" placeholder="enter home price" name="rating"><br>
+        <input type="submit">
+    </form>
+    
+</body>
+</html>

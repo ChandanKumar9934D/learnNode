@@ -1,0 +1,17 @@
+<%- include("partials/main.ejs")%>
+
+</head>
+<body>
+   
+    <%- include("partials/header.ejs")%>
+    <h1>welcome to home page    </h1>
+        <% homes.map((home)=>{ %>
+            <p>home name 
+                <%= home.homename%>
+                </p>
+     <%   })%>
+
+    <%- include("partials/card.ejs")%>
+</body>
+</html>
+
