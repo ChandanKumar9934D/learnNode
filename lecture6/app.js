@@ -19,6 +19,7 @@ app.use((req,res,next)=>{
 })
 app.use(express.urlencoded())
 app.use(userRouter)
+
 app.use('/admin',adminRouter)
 app.get("/*",(req,res)=>{
     res.status(404).send(`<h1>page not found 404</h1>`)
