@@ -13,7 +13,7 @@ const transport = nodemailer.createTransport({
   host: 'smtp.migomta.com',
   port: 587,
   secure: false, // STARTTLS
-  auth: { user: 'smtp_55a7e0a699', pass: "8xFm2u8xhho3oRHs4ZnCP3XojoRqK34J" },
+  auth: { user: 'smtp_55a7e0a699', pass: "hfhjrbgjrhegbjh" },
 });
  const name="Anamika"
   const email="anamika.caller@traveltip.co.in"
