@@ -12,8 +12,8 @@ const transport = nodemailer.createTransport({
   port: 587,
   secure: false, // STARTTLS
   auth: {
-    user:  "smtp_55a7e0a699",
-    pass:  "8xFm2u8xhho3oRHs4ZnCP3XojoRqK34J"
+    user:  "",
+    pass:  ""
   }
 });
 
