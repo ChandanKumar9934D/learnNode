@@ -134,13 +134,10 @@ const recipients = [
 // ]
 
 const telecallers=[
-  "embassyfees@traveltip.co",
-  "manju.feedback@traveltip.co",
-  "sharandeep@traveltip.co",
-  // "kapil.dhingra@traveltip.co",
-  // "rahul.sharma@traveltip.co.in",
-  "",
-  "",
+  "ludhiana.leader@traveltip.co",
+  'amritsar.leader@traveltip.co',
+  "patiala.leader@traveltip.co",
+  "jalandhar.leader@traveltip.co",
 ]
 // HTML Escape Function
 function escapeHtml(value = "") {
