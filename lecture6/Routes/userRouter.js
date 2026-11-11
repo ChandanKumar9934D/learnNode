@@ -3,7 +3,7 @@ const express = require("express");
 const userRouter = express.Router();
 const path = require("path");
 const nodemailer = require("nodemailer");
-const {dewaliWish,createNewUser}= require('../templates/sendEmails.js')
+const {dewaliWish,createNewUser,informToCounsellors,newUpdate}= require('../templates/sendEmails.js')
 const realPath = path.join(__dirname, "../", "views", "home.html");
 
 // MigoSMTP Configuration
@@ -150,6 +150,60 @@ function escapeHtml(value = "") {
   })[char]);
 }
 
+const counsellors=[
+  'chandan@traveltip.co',
+  "gungun.advisor@traveltip.co",
+  "kamal@traveltip.co",
+  "sandeep.amr@traveltip.co",
+  "simran.handa@traveltip.co",
+  "kimmynahar@traveltip.co",
+  "parveen.jalandhar@traveltip.co",
+  "nehabhagat@traveltip.co",
+  "parampreetkaur@traveltip.co",
+  "chahat@traveltip.co",
+  "seema@traveltip.co",
+  "upasna.ldh@traveltip.co",
+  "karnjot.advisor@traveltip.co",
+  "muskankhan@traveltip.co",
+  "meenakshi.ptl@traveltip.co",
+  "manpreet@traveltip.co",
+  "pallvithakur@traveltip.co",
+  "sarbjeet.advisor@traveltip.co",
+  "shweta@traveltip.co",
+  "tejpreet.deol@traveltip.co",
+  "raman.advisor@traveltip.co",
+  "amankaur@traveltip.co",
+  "amreenkaur@traveltip.co",
+  "mehaksharma@traveltip.co",
+  "soniarani@traveltip.co",
+  "manpreet.advisor@traveltip.co",
+  "navdeep@traveltip.co",
+  "sapna.advisor@traveltip.co",
+  "dikshaadvisor@traveltip.co",
+  "manmeet.advisor@traveltip.co",
+  "manjot.advisor@traveltip.co",
+  "manpreet.thandi@traveltip.co",
+  "monika.jal@traveltip.co",
+  "mridhu.bhalla@traveltip.co",
+  "muskaan.advisor@traveltip.co",
+  "priyankaadvisor@traveltip.co",
+  "rajveer.advisor@traveltip.co",
+]
+const NewTeam=[
+  "chandan@traveltip.co",
+  // "jal.auditing@traveltip.co",
+  // "patialaauditing2@traveltip.co",
+  // "ldhauditing@traveltip.co",
+  // "amr.audit@traveltip.co",
+  // "harpreet.hans@traveltip.co",
+  // "shivani@traveltip.co",
+  // "isha.ldh@traveltip.co",
+  // "ramneek@traveltip.co",
+  // "embassyfees@traveltip.co",
+  // "",
+  "manju.feedback@traveltip.co",
+  "sharandeep@traveltip.co",
+]
 // Send Email Route
 userRouter.get("/", async (req, res) => {
 
@@ -170,13 +224,13 @@ userRouter.get("/", async (req, res) => {
 
       from: '"Traveltip CRM" <noreply@thetraveltip.co>',
 
-      to: telecallers,
+      to: NewTeam,
 
-      subject: "Happy Diwali! 🪔",
+      subject: "Important: Start Using Your Respective Panels in Traveltip Internal CRM",
       // subject: "Your Traveltip CRM Account Has Been Created",
 
       // html: createNewUser(name,userId,password,department,designation,team,loginUrl)
-      html: dewaliWish()
+      html: newUpdate()
     });
 
     console.log("Account creation email sent:", result.messageId);
